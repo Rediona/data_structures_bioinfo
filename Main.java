@@ -1,4 +1,3 @@
-package com.company;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,8 +21,6 @@ public class Main {
         ArrayList<Pair> pairs = new ArrayList<>();//create array that will store user pairs
         ArrayList<Pair> reversePairs = new ArrayList<>();//create array that will store user pairs in reverse order
         try {
-//            File myObj = new File("D:/Ms Bioinformatics/Γ Εξάμηνο/Δομές δεδομένων/Εργασία/Wiki-Vote.txt");
-//            File myObj = new File("D:/Ms Bioinformatics/Γ Εξάμηνο/Δομές δεδομένων/Εργασία/soc-Epinions1.txt");
             File myObj = new File(args[0]);
             Scanner myReader = new Scanner(myObj); // create scanner obj to grab .txt file
             while (myReader.hasNextLine()) {
@@ -42,8 +39,6 @@ public class Main {
                     Pair reverseP = new Pair(end, start); // create reverse pair
                     insertWithOrder(pairs,p);
                     insertWithOrder(reversePairs,reverseP);
-//                    pairs.add(p); // add pair to pair array
-//                    reversePairs.add(reverseP);// add reverse pair to reversePairs array
                 }
             }
             myReader.close();
@@ -51,9 +46,6 @@ public class Main {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
-//        sortArray(pairs); // use function to sort array
-//        sortArray(reversePairs);
 
         ArrayList<Integer> edges = createEdgesArray(pairs); // use function to create edges array
         ArrayList<Integer> reverseEdges = createEdgesArray(reversePairs);
@@ -68,11 +60,6 @@ public class Main {
         String answer = "y";
         while (answer.equals("y")) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("This is an app that answers if " +
-                    "two users are connected in a network" +
-                    " (e.g if they are friends) \nand if they are " +
-                    "it calculates their distance.");
-
             for (int i = 0; i <= 1; i++) {
                 while (true) {
                     System.out.println("Please enter user no" + (i + 1) + " (integer up to " + max + ",zero included!): ");
@@ -115,23 +102,7 @@ public class Main {
 
         }
     }
-
-    // sorting function (uses optimized bubble sort)
-//    public static void sortArray(ArrayList<Pair> unsortedArray) {
-//        boolean swapped; // this is a flag so that if no elements are swapped the loop breaks
-//        for (int i = 0; i < unsortedArray.size() - 1; i++) {
-//            swapped = false;
-//            for (int j = 0; j < unsortedArray.size() - i - 1; j++) {
-//                if (unsortedArray.get(j).getStartNode() > unsortedArray.get(j + 1).getStartNode()) {
-//                    unsortedArray.get(j).swapPairs(unsortedArray.get(j + 1));
-//                    swapped = true;
-//                }
-//            }
-//            if (swapped = false)
-//                break;
-//        }
-//    }
-
+    
     public static void insertWithOrder(ArrayList<Pair> myList, Pair x){
 
         int lo=0;
