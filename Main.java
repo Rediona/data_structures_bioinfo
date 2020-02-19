@@ -58,8 +58,9 @@ public class Main {
         System.out.println("Time spent on graph representation: " +((endTimeR-startTimeR)/1000)+" seconds\n");
 
         String answer = "y";
+        Scanner scanner = new Scanner(System.in);
         while (answer.equals("y")) {
-            Scanner scanner = new Scanner(System.in);
+
             for (int i = 0; i <= 1; i++) {
                 while (true) {
                     System.out.println("Please enter user no" + (i + 1) + " (integer up to " + max + ",zero included!): ");
@@ -102,7 +103,7 @@ public class Main {
 
         }
     }
-    
+
     public static void insertWithOrder(ArrayList<Pair> myList, Pair x){
 
         int lo=0;

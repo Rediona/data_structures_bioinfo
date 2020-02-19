@@ -1,4 +1,3 @@
-//package com.company;
 
 public class Pair {
     int startNode,endNode;
@@ -24,19 +23,7 @@ public class Pair {
         this.endNode = endNode;
     }
 
-    public void swapPairs(Pair pair1){
-        int tempStart=0;
-        int tempEnd=0;
-        Pair temp = new Pair(tempStart,tempEnd);
-        temp.setStartNode(pair1.getStartNode());
-        temp.setEndNode(pair1.getEndNode());
-        pair1.setStartNode(getStartNode());
-        pair1.setEndNode(getEndNode());
-        setStartNode(temp.getStartNode());
-        setEndNode(temp.getEndNode());
+    public void printPair(){ // this function is for testing purposes only
+        System.out.println(getStartNode()+"-->"+getEndNode());
     }
-//
-//    public void printPair(){ // this function is for testing purposes only
-//        System.out.println(getStartNode()+"-->"+getEndNode());
-//    }
 }
