@@ -33,4 +33,5 @@ You can then follow the instructions given and try your search.
 
 ## Contributors
 Petros Tamvakis
+
 Rediona Kane
