@@ -140,7 +140,7 @@ public class Main {
         for (int i = 0; i <= max; i++) { // vertices size must be equal to max userId
             for (int j = cnt; j < pairs.size(); j++) {
                 if (pairs.get(j).getStartNode() == i)
-                    j = cnt++;
+                    cnt++;
             }
             vertices.add(cnt);
         }
