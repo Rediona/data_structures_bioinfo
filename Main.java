@@ -138,7 +138,7 @@ public class Main {
         vertices.add(0); // first element is zero because that is the index in edges array it points to
         int cnt = 0; // this counter is used for calculation of neighbours of every user
         for (int i = 0; i <= max; i++) { // vertices size must be equal to max userId
-            for (int j = 0; j < pairs.size(); j++) {
+            for (int j = cnt; j < pairs.size(); j++) {
                 if (pairs.get(j).getStartNode() == i)
                     j = cnt++;
             }
